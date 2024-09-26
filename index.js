@@ -21,6 +21,10 @@ app.post('/dataPushFunction', async (req, res) => {
     }
 });
 
+app.get("/", async(req, ress)=>{
+    ress.status(200).send("Hello")
+})
+
 app.listen(port, () => {
     console.log(`Server running on port ${port}`);
 });
