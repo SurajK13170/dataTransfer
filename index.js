@@ -4,7 +4,7 @@ const axios = require('axios');
 const port = 8080
 
 app.post('/dataPushFunction', async (req, res) => {
-    const { dataPushUrl, requestBody } = req.body;
+    const { requestBody } = req.body;
     try {
         console.log("requestBody data to" , requestBody);
         const response = await axios.post("https://abhasbx.abdm.gov.in/abha/api/v3/patient-hiu/app/v0.5/health-information/transfer", JSON.stringify(requestBody), {
