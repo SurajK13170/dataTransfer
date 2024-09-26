@@ -4,6 +4,7 @@ const axios = require('axios');
 const port = 8080
 
 app.post('/dataPushFunction', async (req, res) => {
+     console.log(req.body)
     const { requestBody } = req.body;
     try {
         console.log("requestBody data to" , requestBody);
